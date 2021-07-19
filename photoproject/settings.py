@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'photo.apps.PhotoConfig',
     'accounts.apps.AccountsConfig',
+    #django-cleanupを追加する
+    'django_cleanup',
 ]
 
 #Userモデルの代わりにCustomUserモデルを使用するための設定
@@ -142,6 +144,12 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'katuhitoh9@gmail.com'
 EMAIL_HOST_PASSWORD = 'assh ybqk nvpi xuot'
 EMAIL_USE_TLS = True #smtpサーバーと通信する際にTLS(セキュア)接続を使う
+
+#mediaフォルダーの場所(BASE_DIR以下のmedia)を登録
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+#mediaのURLを登録
+MEDIA_URL = '/media/'
+
 
 
 
