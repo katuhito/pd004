@@ -7,4 +7,8 @@ app_name = 'photo'
 #photoアプリへのアクセスはviewsモジュールのIndexViewにリダイレクトする
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
+    #写真投稿ページへのアクセスはviewsモジュールのCreatePhotoViewを実行
+    path('post/', views.CreatePhotoView.as_view(), name='post'),
+    #投稿完了ページへのアクセスはviewsモジュールのPostSuccessViewを実行
+    path('post_success/', views.PostSuccessView.as_view(), name='post_success'),
 ]
